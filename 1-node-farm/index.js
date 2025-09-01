@@ -52,7 +52,7 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, {
       "content-type": "application/json",
     });
-    res.end(data); // Needs to send back a string and not an object.
+    res.end(data);
   } else {
     res.writeHead(404, {
       "content-type": "text/html",
