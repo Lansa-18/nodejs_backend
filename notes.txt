@@ -1,0 +1,28 @@
+What is Node?
+Nodejs is a javascript runtime built on google's open-source v8 engine.
+
+WHY AND WHEN TO USE NODEJS?
+-> NODEJS PROS
+    - Single-threaded, based on event driven, non-blocking I/O model.
+    - Perfect for building fast and scalable data-intensive apps.
+    - Javascript across the entire stack: this makes the building process faster and more efficient.
+    - Huge library of open source packages available for every one for free.
+    - Very active developer community.
+
+-> USE NODEJS
+    - API with database behind it (preferably NoSQL)
+    - Data streaming (think youtube)
+    - Real-time chat application
+    - Server side web application
+
+-> DON'T USE NODEJS
+    - Applications with heavy server-side processing (CPU-intensive) [Rails, php, python] are great alternatives.
+
+- Synchronous results in blocking code, while asynchronous results in non-blocking code.
+- Single thread is where our code is executed.
+- Passing callback functions does not automatically make your code asynchronous.
+
+- An http header is basically a piece of information about the response we are sending back.
+- An api is basically a service with which you can request some data from.
+- Top level code is only ever executed once at the start of the program.
+
