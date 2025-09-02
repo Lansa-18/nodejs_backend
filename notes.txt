@@ -26,3 +26,6 @@ WHY AND WHEN TO USE NODEJS?
 - An api is basically a service with which you can request some data from.
 - Top level code is only ever executed once at the start of the program.
 
+-> What is a Slug?
+    A slug is basically the last part of a url that contains a unique string that identifies the resource that a website is displaying.
+

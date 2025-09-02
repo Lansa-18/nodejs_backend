@@ -1,8 +1,11 @@
-const fs = require("fs");
-const http = require("http");
-const url = require("url");
+import fs from "fs";
+import http from "http";
+import url from "url";
+import path from "path";
+import { fileURLToPath } from "url";
+import slugify from "slugify";
 
-const replaceTemplate = require("./modules/replaceTemplate");
+import replaceTemplate from "./modules/replaceTemplate.js";
 
 //////////////////////////////////
 // FILE
@@ -31,6 +34,10 @@ const replaceTemplate = require("./modules/replaceTemplate");
 // });
 // console.log("Will read file.");
 
+// ES module equivalent of __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 //////////////////////////////////////////////////
 // SERVER
 
@@ -52,6 +59,9 @@ const tempCard = fs.readFileSync(
   `${__dirname}/templates/template-card.html`,
   "utf-8"
 );
+
+const slugs = dataObj.map((el) => slugify(el.productName, { lower: true }));
+console.log(slugs);
 
 const server = http.createServer((req, res) => {
   const { query, pathname } = url.parse(req.url, true);
